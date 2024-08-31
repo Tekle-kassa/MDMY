@@ -2,11 +2,12 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CoursesModule } from './courses/courses.module';
+import { CoursesModule } from './course/course.module';
 import { UsersModule } from './users/users.module';
-import { InstructorsModule } from './instructors/instructors.module';
-import { AdminsModule } from './admins/admins.module';
+import { InstructorsModule } from './instructor/instructor.module';
+import { AdminsModule } from './admin/admin.module';
 import { EnrollmentModule } from './enrollment/enrollment.module';
+import { StudentModule } from './student/student.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -24,6 +25,7 @@ import { EnrollmentModule } from './enrollment/enrollment.module';
     InstructorsModule,
     AdminsModule,
     EnrollmentModule,
+    StudentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
