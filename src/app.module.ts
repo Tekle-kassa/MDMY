@@ -8,6 +8,8 @@ import { InstructorsModule } from './instructor/instructor.module';
 import { AdminsModule } from './admin/admin.module';
 import { EnrollmentModule } from './enrollment/enrollment.module';
 import { StudentModule } from './student/student.module';
+import { CourseContentModule } from './course-content/course-content.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -26,6 +28,8 @@ import { StudentModule } from './student/student.module';
     AdminsModule,
     EnrollmentModule,
     StudentModule,
+    CourseContentModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
