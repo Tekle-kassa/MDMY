@@ -1,6 +1,7 @@
 import { Content } from 'src/course-content/course-content.entity';
 import { Enrollment } from 'src/enrollment/enrollment.entity';
 import { Instructor } from 'src/instructor/instructor.entity';
+import { Review } from 'src/review/review.entity';
 import {
   Entity,
   Column,
@@ -45,5 +46,7 @@ export class Course {
     default: () => 'CURRENT_TIMESTAMP',
     onUpdate: 'CURRENT_TIMESTAMP',
   })
+  @OneToMany(() => Review, (review) => review.course)
+  reviews: Review[];
   updatedAt: Date;
 }

@@ -13,8 +13,8 @@ export class Instructor {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('text')
-  bio: string;
+  @Column('text', { default: '' })
+  bio?: string;
 
   @OneToOne(() => User, (user) => user.instructor)
   @JoinColumn()

@@ -1,4 +1,5 @@
 import { Enrollment } from 'src/enrollment/enrollment.entity';
+import { Review } from 'src/review/review.entity';
 import { User } from 'src/users/user.entity';
 import {
   Entity,
@@ -20,4 +21,6 @@ export class Student {
 
   @OneToMany(() => Enrollment, (enrollment) => enrollment.student)
   enrollments: Enrollment[];
+  @OneToMany(() => Review, (review) => review.student)
+  reviews: Review[];
 }

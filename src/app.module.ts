@@ -10,6 +10,8 @@ import { EnrollmentModule } from './enrollment/enrollment.module';
 import { StudentModule } from './student/student.module';
 import { CourseContentModule } from './course-content/course-content.module';
 import { AuthModule } from './auth/auth.module';
+import { ReviewModule } from './review/review.module';
+import { PaymentModule } from './payment/payment.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -30,6 +32,8 @@ import { AuthModule } from './auth/auth.module';
     StudentModule,
     CourseContentModule,
     AuthModule,
+    ReviewModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
